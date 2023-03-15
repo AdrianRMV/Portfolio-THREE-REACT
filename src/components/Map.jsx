@@ -31,12 +31,12 @@ const Map = () => {
                 }
             </Geographies>
             <Annotation
-                subject={[24.144, -110.312]}
-                dx={-90}
-                dy={-30}
+                subject={[-110.3005, 24.044]}
+                dx={-60}
+                dy={-20}
                 connectorProps={{
-                    stroke: '#FF5533',
-                    strokeWidth: 3,
+                    stroke: '#fff',
+                    strokeWidth: 2,
                     strokeLinecap: 'round',
                 }}
             >
@@ -44,7 +44,7 @@ const Map = () => {
                     x="-8"
                     textAnchor="end"
                     alignmentBaseline="middle"
-                    fill="#F53"
+                    fill="#ffffff"
                 >
                     {'La Paz'}
                 </text>

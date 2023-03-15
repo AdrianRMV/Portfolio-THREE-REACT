@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 import Map from './Map';
+
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+
 const Section = styled.div`
     height: 100vh;
     scroll-snap-align: center;
@@ -59,16 +63,49 @@ const Right = styled.div`
 `;
 
 export const Contact = () => {
+
+    // TODO: Mejorar el formulario para que se vacien los inputs al ser mandado
+    const form = useRef();
+
+    const [success, setSuccess] = useState(null);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm(
+                'service_oh1urxt',
+                'template_youe5lj',
+                form.current,
+                'TQXPMvZEAzy3ZWBpI'
+            )
+            .then(
+                (result) => {
+                    console.log(result.text);
+                    setSuccess(true);
+                },
+                (error) => {
+                    console.log(error.text);
+                    setSuccess(false);
+                }
+            );
+    };
+
     return (
         <Section>
             <Container>
                 <Left>
-                    <Form>
+                    <Form onSubmit={handleSubmit} ref={form}>
                         <Title>Contact me</Title>
-                        <Input placeholder="Name" />
-                        <Input placeholder="Email" />
-                        <TextArea placeholder="Write your message" rows={10} />
-                        <Button>Send</Button>
+                        <Input placeholder="Name" type="text" name="name" />
+                        <Input placeholder="Email" type="email" name="email" />
+                        <TextArea
+                            placeholder="Write your message"
+                            rows={10}
+                            name="message"
+                        />
+                        <Button type="submit">Send</Button>
+                        {success && 'Se entrego tu mensaje pa'}
                     </Form>
                 </Left>
 
