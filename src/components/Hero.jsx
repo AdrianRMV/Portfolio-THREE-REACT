@@ -77,7 +77,7 @@ const Img = styled.img`
 
     @keyframes animate {
         to {
-            transform: translateY(22px);
+            transform: translateY(18px);
         }
     }
 `;
@@ -103,7 +103,7 @@ export const Hero = () => (
                     <OrbitControls enableZoom={false} />
                     <ambientLight intensity={1} />
                     <directionalLight position={[3, 2, 1]} />
-                    <Sphere args={[1, 100, 200]} scale={1.6}>
+                    <Sphere args={[1, 100, 200]} scale={1.4}>
                         <MeshDistortMaterial
                             color="#2f064f"
                             attach="material"
