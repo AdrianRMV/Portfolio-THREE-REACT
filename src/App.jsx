@@ -3,7 +3,6 @@ import { Hero } from './components/Hero';
 import { Who } from './components/Who';
 import { Work } from './components/Work';
 import { Contact } from './components/Contact';
-import { Test } from './components/Test';
 
 const Container = styled.div`
     height: 100vh;
@@ -26,7 +25,6 @@ export const App = () => {
             <Who />
             <Work />
             <Contact />
-            <Test />
         </Container>
     );
 };

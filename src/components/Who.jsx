@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+import { OrbitControls } from '@react-three/drei';
+import { Canvas } from '@react-three/fiber';
+import { Cube } from './Cube';
 const Section = styled.div`
     height: 100vh;
     scroll-snap-align: center;
@@ -64,7 +67,14 @@ const Button = styled.button`
 export const Who = () => (
     <Section>
         <Container>
-            <Left>{/* 3d model */}</Left>
+            <Left>
+                <Canvas camera={{ fov: 25, position: [5, 5, 5] }}>
+                    <OrbitControls enableZoom={false} autoRotate />
+                    <ambientLight intensity={1} />
+                    <directionalLight position={[3, 2, 1]} />
+                    <Cube />
+                </Canvas>
+            </Left>
             <Right>
                 <Title>Think outside the square space</Title>
                 <WhatWeDo>
@@ -72,7 +82,8 @@ export const Who = () => (
                     <Subtitle> Who we Are</Subtitle>
                 </WhatWeDo>
                 <Description>
-                    a creative group of designers and developers witha a pasion for the arts.
+                    a creative group of designers and developers witha a pasion
+                    for the arts.
                 </Description>
                 <Button>Show our works</Button>
             </Right>

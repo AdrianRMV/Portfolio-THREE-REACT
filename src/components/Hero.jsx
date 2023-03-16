@@ -1,3 +1,5 @@
+import { MeshDistortMaterial, Sphere, OrbitControls } from '@react-three/drei';
+import { Canvas } from '@react-three/fiber';
 import styled from 'styled-components';
 import { Navbar } from './Navbar';
 const Section = styled.div`
@@ -74,7 +76,7 @@ const Img = styled.img`
     animation: animate 2.5s infinite ease-in-out alternate;
 
     @keyframes animate {
-        to{
+        to {
             transform: translateY(22px);
         }
     }
@@ -97,7 +99,19 @@ export const Hero = () => (
                 <Button>Learn More</Button>
             </Left>
             <Right>
-                {/* 3d model */}
+                <Canvas camera={{ fov: 25, position: [5, 5, 5] }}>
+                    <OrbitControls enableZoom={false} />
+                    <ambientLight intensity={1} />
+                    <directionalLight position={[3, 2, 1]} />
+                    <Sphere args={[1, 100, 200]} scale={1.6}>
+                        <MeshDistortMaterial
+                            color="#2f064f"
+                            attach="material"
+                            distort={0.5}
+                            speed={2}
+                        />
+                    </Sphere>
+                </Canvas>
                 <Img src="../img/moon.png" />
             </Right>
         </Container>
