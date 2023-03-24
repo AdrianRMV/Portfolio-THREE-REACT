@@ -25,6 +25,7 @@ const Container = styled.div`
     width: 1400px;
     display: flex;
     justify-content: space-between;
+    gap: 100px;
 `;
 
 const Left = styled.div`
