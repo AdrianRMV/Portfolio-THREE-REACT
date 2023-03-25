@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import { DevelopmentDesign } from './designs/DevelopmentDesign';
+import { IllustrationDesign } from './designs/IllustrationDesign';
 import { ProductDesign } from './designs/ProductDesign';
+import { SocialDesign } from './designs/SocialDesign';
 import { WebDesign } from './designs/WebDesign';
 
 const data = [
@@ -77,6 +79,7 @@ const ListItem = styled.li`
 
 const Right = styled.div`
     flex: 1;
+    position: relative;
 `;
 
 export const Work = () => {
@@ -102,8 +105,12 @@ export const Work = () => {
                         <WebDesign />
                     ) : work === 'Development' ? (
                         <DevelopmentDesign />
-                    ) : (
+                    ) : work === 'Illustration' ? (
+                        <IllustrationDesign />
+                    ) : work === 'Product Design' ? (
                         <ProductDesign />
+                    ) : (
+                        <SocialDesign />
                     )}
                 </Right>
             </Container>

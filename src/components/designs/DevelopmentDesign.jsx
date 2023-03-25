@@ -1,6 +1,6 @@
 import { OrbitControls, Stage } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
-import PcVintage from './PcVintage';
+import PcVintage from './3D MODELS/PcVintage';
 export const DevelopmentDesign = () => {
     return (
         <Canvas>
