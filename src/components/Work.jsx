@@ -93,8 +93,10 @@ const ListItem = styled.li`
         }
     }
 
-    &:hover {
-        transform: scale(1.5);
+    @media only screen and (max-width: 768px) {
+        &:hover {
+            transform: scale(1.5);
+        }
     }
 `;
 
