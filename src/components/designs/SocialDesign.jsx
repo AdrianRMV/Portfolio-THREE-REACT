@@ -7,7 +7,7 @@ export const SocialDesign = () => {
             <Stage environment="city" intensity={0.6}>
                 <Fb />
             </Stage>
-            <OrbitControls enableZoom={false} />
+            <OrbitControls enableZoom={false} enableRotate={false} autoRotate />
         </Canvas>
     );
 };

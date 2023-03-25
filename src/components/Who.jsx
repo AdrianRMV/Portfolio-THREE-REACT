@@ -19,6 +19,16 @@ const Container = styled.div`
 
 const Left = styled.div`
     flex: 1;
+    @media only screen and (max-width: 768px) {
+        display: none;
+    }
+`;
+
+const Title = styled.h1`
+    font-size: 74px;
+    @media only screen and (max-width: 768px) {
+        font-size: 60px;
+    }
 `;
 
 const Right = styled.div`
@@ -27,17 +37,16 @@ const Right = styled.div`
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-`;
-
-const Title = styled.div`
-    font-size: 74px;
-    font-weight: 500;
+    @media only screen and (max-width: 768px) {
+        align-items: center;
+        text-align: center;
+    }
 `;
 
 const WhatWeDo = styled.div`
     display: flex;
-    gap: 10px;
     align-items: center;
+    gap: 10px;
 `;
 
 const Line = styled.img`
@@ -55,12 +64,13 @@ const Description = styled.p`
 
 const Button = styled.button`
     background-color: #da4ea2;
-    border: none;
+    color: white;
     font-weight: 500;
-    border-radius: 5px;
+    width: 120px;
     padding: 10px;
+    border: none;
+    border-radius: 5px;
     width: max-content;
-    color: #fff;
     cursor: pointer;
 `;
 

@@ -23,12 +23,12 @@ export const WebDesign = () => {
                 <Stage environment="city" intensity={0.6}>
                     <Macbook />
                 </Stage>
-                <OrbitControls enableZoom={false} />
+                <OrbitControls
+                    enableZoom={false}
+                    enableRotate={false}
+                    autoRotate
+                />
             </Canvas>
-            <Desc>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-                doloribus laborum cumque labore facere commodi.
-            </Desc>
         </>
     );
 };

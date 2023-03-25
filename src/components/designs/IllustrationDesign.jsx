@@ -22,12 +22,12 @@ export const IllustrationDesign = () => {
                 <Stage environment="city" intensity={0.6}>
                     <Skull />
                 </Stage>
-                <OrbitControls enableZoom={false} />
+                <OrbitControls
+                    enableZoom={false}
+                    enableRotate={false}
+                    autoRotate
+                />
             </Canvas>
-            <Desc>
-                We design products with a strong focus on both world class
-                design and ensurign your product is a market success.
-            </Desc>
         </>
     );
 };

@@ -16,11 +16,15 @@ const Container = styled.div`
     justify-content: space-between;
     gap: 50px;
 `;
+
 const Left = styled.div`
     flex: 1;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
+    justify-content: flex-end;
+    @media only screen and (max-width: 768px) {
+        justify-content: center;
+    }
 `;
 
 const Title = styled.h1`
@@ -32,6 +36,9 @@ const Form = styled.form`
     display: flex;
     flex-direction: column;
     gap: 25px;
+    @media only screen and (max-width: 768px) {
+        width: 300px;
+    }
 `;
 
 const Input = styled.input`
@@ -43,14 +50,14 @@ const Input = styled.input`
 
 const TextArea = styled.textarea`
     padding: 20px;
-    background-color: #e8e6e6;
     border: none;
     border-radius: 5px;
+    background-color: #e8e6e6;
 `;
 
 const Button = styled.button`
     background-color: #da4ea2;
-    color: #fff;
+    color: white;
     border: none;
     font-weight: bold;
     cursor: pointer;
@@ -60,10 +67,12 @@ const Button = styled.button`
 
 const Right = styled.div`
     flex: 1;
+    @media only screen and (max-width: 768px) {
+        display: none;
+    }
 `;
 
 export const Contact = () => {
-
     // TODO: Mejorar el formulario para que se vacien los inputs al ser mandado
     const form = useRef();
 

@@ -6,6 +6,7 @@ import { Contact } from './components/Contact';
 
 const Container = styled.div`
     height: 100vh;
+    margin: 0 auto;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
     overflow-y: auto;
