@@ -73,10 +73,18 @@ export const Navbar = () => {
                 <Links>
                     <Logo src="../img/logo.png" />
                     <List>
-                        <ListItem>Home</ListItem>
-                        <ListItem>Studio</ListItem>
-                        <ListItem>Works</ListItem>
-                        <ListItem>Contact</ListItem>
+                        <ListItem>
+                            <a href="#HeroSection">Home</a>
+                        </ListItem>
+                        <ListItem>
+                            <a href="#StudioSection">Studio</a>
+                        </ListItem>
+                        <ListItem>
+                            <a href="#WorksSection">Works</a>
+                        </ListItem>
+                        <ListItem>
+                            <a href="#ContactSection">Contact</a>
+                        </ListItem>
                     </List>
                 </Links>
                 <Icons>

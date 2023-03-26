@@ -26,6 +26,7 @@ export const IllustrationDesign = () => {
                     enableZoom={false}
                     enableRotate={false}
                     autoRotate
+                    rotateSpeed={2}
                 />
             </Canvas>
         </>

@@ -1,30 +1,18 @@
 import { OrbitControls, Stage } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
-import styled from 'styled-components';
-import World from './3D MODELS/World';
-
-const Desc = styled.div`
-    width: 200px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    position: absolute;
-    top: 100px;
-    right: 100px;
-    color: #000;
-    display: flex;
-    height: min-content;
-`;
+// import World from './3D MODELS/World';
+import Canon from './3D MODELS/Canon';
 export const ProductDesign = () => {
     return (
         <>
             <Canvas>
-                <Stage environment="sunset" intensity={0.6}>
-                    <World />
+                <Stage environment="night" intensity={0}>
+                    <Canon />
                 </Stage>
                 <OrbitControls
                     enableZoom={false}
                     enableRotate={false}
+                    rotateSpeed={2}
                     autoRotate
                 />
             </Canvas>

@@ -113,7 +113,7 @@ const Img = styled.img`
 `;
 
 export const Hero = () => (
-    <Section>
+    <Section id="HeroSection">
         <Navbar />
         <Container>
             <Left>

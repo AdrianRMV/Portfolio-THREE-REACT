@@ -7,7 +7,12 @@ export const DevelopmentDesign = () => {
             <Stage environment="city" intensity={0.6}>
                 <PcVintage />
             </Stage>
-            <OrbitControls enableZoom={false} enableRotate={false} autoRotate />
+            <OrbitControls
+                enableZoom={false}
+                enableRotate={false}
+                autoRotate
+                rotateSpeed={2}
+            />
         </Canvas>
     );
 };

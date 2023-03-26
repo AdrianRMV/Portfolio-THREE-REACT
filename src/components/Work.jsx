@@ -5,7 +5,7 @@ import { IllustrationDesign } from './designs/IllustrationDesign';
 import { ProductDesign } from './designs/ProductDesign';
 import { SocialDesign } from './designs/SocialDesign';
 import { WebDesign } from './designs/WebDesign';
-
+import { CyberDesign } from './designs/CyberDesign';
 const data = [
     'Web Design',
     'Development',
@@ -58,7 +58,7 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
-    font-size: 90px;
+    font-size: 70px;
     font-weight: bold;
     cursor: pointer;
     color: transparent;
@@ -70,6 +70,7 @@ const ListItem = styled.li`
         color: #fff;
         -webkit-text-stroke: 0px;
     }
+    width: max-content;
     ::after {
         content: '${(props) => props.text}';
         position: absolute;
@@ -80,9 +81,7 @@ const ListItem = styled.li`
         overflow: hidden;
         white-space: nowrap;
     }
-    &:hover,
-    &:active,
-    &:scope {
+    &:hover {
         ::after {
             animation: moveText 0.5s linear both;
             @keyframes moveText {
@@ -93,11 +92,13 @@ const ListItem = styled.li`
         }
     }
 
-    @media only screen and (max-width: 768px) {
-        &:hover {
-            transform: scale(1.5);
-        }
+    /* @media only screen and (max-width: 768px) { */
+    &:hover,
+    &:active,
+    &:scope {
+        transform: scale(1.3);
     }
+    /* } */
 `;
 
 const Right = styled.div`
@@ -108,7 +109,7 @@ const Right = styled.div`
 export const Work = () => {
     const [work, setWork] = useState('Web Design');
     return (
-        <Section>
+        <Section id="WorksSection">
             <Container>
                 <Left>
                     <List>
