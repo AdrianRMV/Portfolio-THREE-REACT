@@ -58,7 +58,7 @@ const Line = styled.img`
 `;
 
 const Subtitle = styled.h2`
-    color: #da4ea2;
+    color: #828282;
 `;
 
 const Description = styled.p`
@@ -71,7 +71,23 @@ const Description = styled.p`
 `;
 
 const Button = styled.button`
-    background-color: #da4ea2;
+    background: rgb(130, 130, 130);
+    background: -moz-linear-gradient(
+        90deg,
+        rgba(130, 130, 130, 1) 0%,
+        rgba(84, 84, 84, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+        90deg,
+        rgba(130, 130, 130, 1) 0%,
+        rgba(84, 84, 84, 1) 100%
+    );
+    background: linear-gradient(
+        90deg,
+        rgba(130, 130, 130, 1) 0%,
+        rgba(84, 84, 84, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#828282",endColorstr="#545454",GradientType=1);
     color: white;
     font-weight: 500;
     width: 100px;
@@ -135,7 +151,7 @@ export const Hero = () => (
                     <directionalLight position={[3, 2, 1]} />
                     <Sphere args={[1, 100, 200]} scale={1.4}>
                         <MeshDistortMaterial
-                            color="#2f064f"
+                            color="#262525"
                             attach="material"
                             distort={0.5}
                             speed={2}
